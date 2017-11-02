@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./estilos/style2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/funcion2.js"></script>
+    <title>Noticias</title>
+</head>
+<body>
+    <header class="container" id="tema">
+        <h1>Ultimas Noticias</h1>
+        <input class="btn btn-primary" type="button" id="btnOcultar" onclick="ocultar()" value="Nueva Noticia">
+        <img src="./giphy.gif" id="spinner" style="float:right" hidden=true>
+        <div style="float:right" class="form-group" id="nuevaNot" hidden="true">
+                
+              <label for="tema1">tema: </label><br>
+              <input class="form-control" type="text" name="tema1" id="tema1" placeholder="nuevo tema..." ><br><br>
+              <label for="titulo">titulo noticia: </label><br>
+              <input class="form-control" type="text" name="titulo" id="titulo" placeholder="titulo de la noticia..." ><br><br>
+              <label for="posttext">noticia</label><br>
+              <input class="form-control" type="text" name="noticia" id="noticia" placeholder="texto..." ><br><br>
+              <input class="btn btn-primary" type="button" name="guardar" id="btnGuardar" value="Guardar" onclick="NuevaNoticia()"><br><br>
+              <div id="txtError"class="need-help" > </div>
+          </div>
+    </header>
+    <section class="container" id="titynot"></section>
+
+
+</body>
+</html>
