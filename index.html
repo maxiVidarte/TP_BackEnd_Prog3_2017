@@ -8,27 +8,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/funcion2.js"></script>
+    <script src="js/funcionesLogin.js"></script>
     <title>Noticias</title>
 </head>
 <body>
     <header class="container" id="tema">
-        <h1>Ultimas Noticias</h1>
-        <input class="btn btn-primary" type="button" id="btnOcultar" onclick="ocultar()" value="Nueva Noticia">
-        <img src="./giphy.gif" id="spinner" style="float:right" hidden=true>
-        <div style="float:right" class="form-group" id="nuevaNot" hidden="true">
-                
-              <label for="tema1">tema: </label><br>
-              <input class="form-control" type="text" name="tema1" id="tema1" placeholder="nuevo tema..." ><br><br>
-              <label for="titulo">titulo noticia: </label><br>
-              <input class="form-control" type="text" name="titulo" id="titulo" placeholder="titulo de la noticia..." ><br><br>
-              <label for="posttext">noticia</label><br>
-              <input class="form-control" type="text" name="noticia" id="noticia" placeholder="texto..." ><br><br>
-              <input class="btn btn-primary" type="button" name="guardar" id="btnGuardar" value="Guardar" onclick="NuevaNoticia()"><br><br>
-              <div id="txtError"class="need-help" > </div>
-          </div>
+        <input type="button" id="botonListaEstacionados" value="estacionados" onclick="MostrarEstacionados()">
+        <input type="button" id="botonListadoPersonas" value="listar personas" onclick="MostrarListadoPersonas()">
+        <input type="button" class="Login-title"id="botonInicio" value="Inicio sesion" onclick="MostrarLogin()">
+        
     </header>
-    <section class="container" id="titynot"></section>
+    <section class="container" id="contenido"></section>
 
 
 </body>
