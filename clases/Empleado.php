@@ -2,15 +2,15 @@
 require_once "AccesoDatos.php";
 
 class  Empleado{
-    protected $id;
-    protected $nombre;
-    protected $apellido;
-    protected $clave;
-    protected $mail;
-    //protected $turno;
-    //protected $perfil;
-    //protected $fecha_creacion;
-    //protected $foto;
+    public $id;
+    public $nombre;
+    public $apellido;
+    public $clave;
+    public $mail;
+    //public $turno;
+    //public $perfil;
+    //public $fecha_creacion;
+    //public $foto;
 
     public function BorrarEmpleado(){
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
@@ -88,7 +88,7 @@ class  Empleado{
         $consulta = $objetoAccesoDato->RetornarConsulta("
         SELECT id, nombre,apellido,clave,mail from empleados");
         $consulta->execute();
-        return $consulta->fetchAll(PDO::FETCH_CLASS,'empleados');
+        return $consulta->fetchAll(PDO::FETCH_CLASS,'empleado');
     }
 
     public static function TraerUnEmpleado($id){

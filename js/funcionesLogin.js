@@ -7,7 +7,7 @@ function MostrarLogin()
     });
     funcionAjax.done(function(retorno){
         $("#contenido").html(retorno);
-    })
+    });
 }
 function MostrarListadoPersonas(){
     var funcionAjax = $.ajax({
@@ -17,7 +17,7 @@ function MostrarListadoPersonas(){
     });
     funcionAjax.done(function(retorno){
         $("#contenido").html(retorno);
-    })
+    });
 }
 function MostrarEstacionados(){
     var funcionAjax = $.ajax({
@@ -27,5 +27,9 @@ function MostrarEstacionados(){
     });
     funcionAjax.done(function(retorno){
         $("#contenido").html(retorno);
-    })
+    });
 }
+function AgregarPersonas(){
+    console.log("hola mundo");
+}
+ 

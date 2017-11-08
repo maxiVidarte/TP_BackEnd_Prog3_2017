@@ -14,6 +14,10 @@ switch($queHago){
     case 'MostrarEstacionados':
         include "partes/AutosEstacionados.php";
         break;
+    case 'AgregarPersonas':
+            echo "hola a todos";
+         //include "partes/Agregado.php";
+         break;
 
 }
 ?>
