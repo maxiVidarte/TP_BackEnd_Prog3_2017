@@ -30,6 +30,28 @@ function MostrarEstacionados(){
     });
 }
 function AgregarPersonas(){
-    console.log("hola mundo");
+   var funcionAjax = $.ajax({
+       url:"nexo.php",
+       type:"post",
+       data:{accion:"AgregarPersona"}
+   });
+   funcionAjax.done(function(retorno){
+       $("#contenido2").html(retorno);
+   });
 }
+function Agregar(){
+    var funcionAjax = $.ajax({
+        url:"nexo.php",
+        type:"post",
+        data:{accion:"Agregar",
+        nombre:$("#nuevoNombre").val(),
+        apellido:$("#nuevoApellido").val(),
+        clave:$("#nuevaClave").val(),
+        mail:$("nuevoMail").val()}
+    });
+    funcionAjax.done(function(retorno){
+        alert(retorno);
+        })
+}
+
  
