@@ -47,10 +47,11 @@ function Agregar(){
         nombre:$("#nuevoNombre").val(),
         apellido:$("#nuevoApellido").val(),
         clave:$("#nuevaClave").val(),
-        mail:$("nuevoMail").val()}
+        mail:$("#nuevoMail").val()}
     });
     funcionAjax.done(function(retorno){
-        alert(retorno);
+       alert(retorno)
+        console.log(retorno)
         })
 }
 

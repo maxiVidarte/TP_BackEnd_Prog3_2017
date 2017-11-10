@@ -24,7 +24,11 @@ class AccesoDatos
     {
         return $this->_objetoPDO->prepare($sql);
     }
- 
+    
+    public function RetornarUltimoIdInsertado()
+    { 
+        return $this->_objetoPDO->lastInsertId(); 
+    }
     public static function DameUnObjetoAcceso()//singleton
     {
         if (!isset(self::$_objetoAccesoDatos)) {       

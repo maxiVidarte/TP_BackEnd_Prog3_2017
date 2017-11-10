@@ -41,7 +41,7 @@ class  Empleado{
             INSERT into empleados(nombre,apellido,clave,mail)
             values('$this->nombre','$this->apellido','$this->clave','$this->mail')");
         $consulta->execute();
-        return $objetoAccesoDato->RetornarUltimoInsertado();
+        return $objetoAccesoDato->RetornarUltimoIdInsertado();
     }
 
     public function ModificarEmpleadoParametros(){
@@ -59,7 +59,7 @@ class  Empleado{
         $consulta->bindValue(':clave',$this->clave,PDO::PARAM_STR);
         $consulta->bindValue(':mail',$this->mail,PDO::PARAM_STR);
         $consulta->execute();
-        return $objetoAccesoDato->RetornarUltimoInsertado();
+        return $objetoAccesoDato->RetornarUltimoIdInsertado();
     }
 
     public function InsertarElEmpleadoParametros(){
@@ -72,7 +72,7 @@ class  Empleado{
         $consulta->bindValue(':clave',$this->clave,PDO::PARAM_STR);
         $consulta->bindValue(':mail',$this->mail,PDO::PARAM_STR);
         $consulta->execute();
-        return $objetoAccesoDato->RetornarUltimoInsertado();
+        return $objetoAccesoDato->RetornarUltimoIdInsertado();
     }
 
     public function GuardarEmpleado(){
